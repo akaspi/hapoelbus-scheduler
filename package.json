@@ -4,7 +4,7 @@
   "description": "scheduler tasks for https://github.com/akaspi/hapoelbus",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "JASMINE_CONFIG_PATH=jasmine.json jasmine"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/akaspi/hapoelbus-scheduler/issues"
   },
-  "homepage": "https://github.com/akaspi/hapoelbus-scheduler#readme"
+  "homepage": "https://github.com/akaspi/hapoelbus-scheduler#readme",
+  "dependencies": {
+    "firebase": "^3.6.4",
+    "lodash": "^4.17.2"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.2"
+  }
 }
