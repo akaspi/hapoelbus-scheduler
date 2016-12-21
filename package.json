@@ -9,6 +9,9 @@
     "test": "JASMINE_CONFIG_PATH=jasmine.json jasmine",
     "update-version": "npm version $1 -m \"Update version to %s\""
   },
+  "engines": {
+    "node": "6.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/akaspi/hapoelbus-scheduler.git"
