@@ -1,1 +1,1 @@
-web: npm run create-tasks
+web: npm run create-tasks && node server.js
