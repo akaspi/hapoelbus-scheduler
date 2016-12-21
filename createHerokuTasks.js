@@ -5,6 +5,8 @@ const mkdirp = require('mkdirp');
 const createSchedulerTaskTemplate = () => {
   const templateArr = [];
   templateArr.push('#!/usr/bin/env node');
+  templateArr.push('const config = require(\'<%= configPath %>\');');
+  templateArr.push('require(\'<%= serverDBPath %>\').initialize(config.firebase);');
   templateArr.push('const task = require(\'<%= fileName %>\');');
   templateArr.push('task.exec().then(() => process.exit());');
   return _.template(templateArr.join('\n'));
@@ -22,7 +24,11 @@ try {
   _.forEach(fileNames, fileName => {
     fs.writeFileSync(
       dist + removeFileExtension(fileName),
-      taskTemplate({ fileName: '../src/tasks/' + fileName }),
+      taskTemplate({
+          fileName: '../src/tasks/' + fileName,
+          configPath: '../config',
+          serverDBPath: '../src/utils/serverDB'
+      }),
       'utf-8'
     );
   });
