@@ -20,7 +20,7 @@ const getValidRecipients = recipients => _(recipients)
 const send = request => new Promise((resolve, reject) => {
     sendGrid.API(request, (error, response) => { // eslint-disable-line new-cap
         if (error || response.statusCode !== 202) {
-            return reject();
+            return reject(error);
         }
         return resolve();
     });
