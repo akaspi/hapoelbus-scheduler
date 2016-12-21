@@ -14,7 +14,7 @@ const removeFileExtension = fileName => fileName.replace(/\.[^/.]+$/, '');
 
 const taskTemplate = createSchedulerTaskTemplate();
 const fileNames = fs.readdirSync(__dirname + '/src/tasks');
-const dist = 'bin/';
+const dist = 'app/';
 
 mkdirp.sync(dist);
 
