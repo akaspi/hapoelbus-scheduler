@@ -26,7 +26,9 @@
     "lodash": "^4.17.2",
     "mkdirp": "^0.5.1",
     "nock": "^9.0.2",
-    "sendgrid": "^4.7.1"
+    "proxyquire": "^1.7.10",
+    "sendgrid": "^4.7.1",
+    "twilio": "^2.11.1"
   },
   "devDependencies": {
     "jasmine": "^2.5.2"

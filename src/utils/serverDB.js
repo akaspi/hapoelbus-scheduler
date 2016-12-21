@@ -8,6 +8,8 @@ firebaseAdmin.initializeApp({
 
 const read = path => firebaseAdmin.database().ref(path).once('value').then(snapshot => snapshot.val());
 
+const setIn = (path, data) => firebaseAdmin.database().ref(path).set(data);
+
 const remove = path => firebaseAdmin.database().ref(path).remove();
 
-module.exports = { read, remove };
+module.exports = { read, setIn, remove };
