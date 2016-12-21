@@ -4,6 +4,7 @@
   "description": "scheduler tasks for https://github.com/akaspi/hapoelbus",
   "main": "index.js",
   "scripts": {
+    "start": "echo Welcome to HapoelBus Scheduler!",
     "postinstall": "node ./createHerokuTasks",
     "test": "JASMINE_CONFIG_PATH=jasmine.json jasmine",
     "update-version": "npm version $1 -m \"Update version to %s\""
