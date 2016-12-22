@@ -1,3 +1,6 @@
 {
-    "all": true
+    "all": true,
+    "exclude": [
+        "./createHerokuTasks.js"
+    ]
 }
