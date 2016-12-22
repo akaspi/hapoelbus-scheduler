@@ -1,0 +1,6 @@
+{
+    "include": [
+      "src/tasks/**/*.js"
+    ],
+    "all": true
+}

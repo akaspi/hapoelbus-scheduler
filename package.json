@@ -6,7 +6,8 @@
   "scripts": {
     "start": "echo Welcome to HapoelBus Scheduler!",
     "postinstall": "node ./createHerokuTasks",
-    "test": "JASMINE_CONFIG_PATH=jasmine.json jasmine",
+    "test": "JASMINE_CONFIG_PATH=jasmine.json nyc jasmine",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "update-version": "npm version $1 -m \"Update version to %s\""
   },
   "engines": {
@@ -36,7 +37,9 @@
     "twilio": "^2.11.1"
   },
   "devDependencies": {
+    "coveralls": "^2.11.15",
     "jasmine": "^2.5.2",
-    "jasmine-spec-reporter": "^2.7.0"
+    "jasmine-spec-reporter": "^2.7.0",
+    "nyc": "^10.0.0"
   }
 }

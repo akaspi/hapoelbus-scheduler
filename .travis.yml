@@ -3,3 +3,4 @@ sudo: false
 node_js:
   - "6.6.0"
 install: npm install
+after_success: npm run coverage
